@@ -21,6 +21,5 @@ open class AwesomeContentExtension: UIViewController, UNNotificationContentExten
     }
     
     public func didReceive(_ notification: UNNotification) {
-        self.headlineText?.text = notification.request.content.title
     }
 }

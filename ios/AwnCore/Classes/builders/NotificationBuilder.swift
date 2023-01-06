@@ -242,7 +242,7 @@ public class NotificationBuilder {
     
     private func setSummary(notificationModel:NotificationModel, content:UNMutableNotificationContent){
         if #available(iOS 12.0, *) {
-            content.summaryArgument = notificationModel.content!.summary?.withoutHtmlTags() ?? ""
+            content.summaryArgument = notificationModel.content!.summary?.withoutHtmlTags() ?? "kkkkkk"
         }
     }
     

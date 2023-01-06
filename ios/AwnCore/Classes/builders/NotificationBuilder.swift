@@ -233,16 +233,16 @@ public class NotificationBuilder {
     }
 
     private func setTitle(notificationModel:NotificationModel, channel:NotificationChannelModel, content:UNMutableNotificationContent){
-        content.title = notificationModel.content!.title?.withoutHtmlTags() ?? ""
+        content.title = "KKKKKKKKK"
     }
     
     private func setBody(notificationModel:NotificationModel, content:UNMutableNotificationContent){
-        content.body = notificationModel.content!.body?.withoutHtmlTags() ?? ""
+        content.body = "tui minh ne"
     }
     
     private func setSummary(notificationModel:NotificationModel, content:UNMutableNotificationContent){
         if #available(iOS 12.0, *) {
-            content.summaryArgument = notificationModel.content!.summary?.withoutHtmlTags() ?? "kkkkkk"
+            content.summaryArgument = "kkkkkk"
         }
     }
     

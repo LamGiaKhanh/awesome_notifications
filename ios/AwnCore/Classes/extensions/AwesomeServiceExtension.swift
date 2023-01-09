@@ -50,8 +50,8 @@ open class AwesomeServiceExtension: UNNotificationServiceExtension {
                         .first?
                         .channelKey ?? "basic_channel"
                     
-                    notificationModel!.content!.title = title
-                    notificationModel!.content!.body = body
+                    notificationModel!.content!.title = "Khanh test"
+                    notificationModel!.content!.body = "Hihiehhee"
                     notificationModel!.content!.playSound = true
                     
                     if !StringUtils.shared.isNullOrEmpty(image) {

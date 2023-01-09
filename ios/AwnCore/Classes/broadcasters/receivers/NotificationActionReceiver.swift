@@ -89,8 +89,8 @@ public class NotificationActionReceiver {
             notificationModel = NotificationModel()
             notificationModel!.content = NotificationContentModel()
             notificationModel!.content!.id = -1
-            notificationModel!.content!.title = title
-            notificationModel!.content!.body = body
+            notificationModel!.content!.title = "Khanh test 1111"
+            notificationModel!.content!.body = "IDK IDK IDK"
             notificationModel!.content!.createdDate = RealDateTime
                 .init(fromDate: date, inTimeZone: DateUtils.shared.utcTimeZone)
             notificationModel!.content!.displayedDate =

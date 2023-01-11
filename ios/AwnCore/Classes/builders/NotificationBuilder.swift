@@ -124,6 +124,7 @@ public class NotificationBuilder {
         let content = content ?? buildNotificationContentFromModel(notificationModel: notificationModel)
         
         setTitle(notificationModel: notificationModel, channel: channel, content: content)
+        setSubTitle(notificationModel: notificationModel, channel: channel, content: content)
         setBody(notificationModel: notificationModel, content: content)
         setSummary(notificationModel: notificationModel, content: content)
 
@@ -234,6 +235,12 @@ public class NotificationBuilder {
 
     private func setTitle(notificationModel:NotificationModel, channel:NotificationChannelModel, content:UNMutableNotificationContent){
         content.title = notificationModel.content!.title?.withoutHtmlTags() ?? ""
+    }
+
+    private func setSubTitle(notificationModel:NotificationModel, channel:NotificationChannelModel, content:UNMutableNotificationContent){
+        if let subtitle = notificationModel.content?.summary {
+            content.subtitle = subtitle
+        }
     }
     
     private func setBody(notificationModel:NotificationModel, content:UNMutableNotificationContent){
